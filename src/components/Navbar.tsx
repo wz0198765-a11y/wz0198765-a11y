@@ -1,4 +1,4 @@
-import { BookOpen, Home, Settings, LogOut, Users, Activity, Library, Shield } from 'lucide-react';
+import { BookOpen, Home, Settings, LogOut, Users, Activity, Library, Shield, FolderTree } from 'lucide-react';
 import { User } from '../types';
 
 interface NavbarProps {
@@ -16,6 +16,7 @@ export default function Navbar({ currentUser, currentPage, onNavigate, onLogout 
       { id: 'books-admin', label: 'إدارة الكتب', icon: Library },
       { id: 'activities', label: 'سجل النشاطات', icon: Activity },
     ] : []),
+    { id: 'filetree', label: 'مخطط الملفات', icon: FolderTree },
     { id: 'settings', label: 'الإعدادات', icon: Settings },
   ];
 

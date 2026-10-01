@@ -26,6 +26,7 @@ import UserManagement from './components/UserManagement';
 import BookManagement from './components/BookManagement';
 import ActivityLog from './components/ActivityLog';
 import Settings from './components/Settings';
+import FileTree from './components/FileTree';
 
 function App() {
   const [currentUser, setCurrentUserState] = useState<User | null>(null);
@@ -309,6 +310,9 @@ function App() {
             currentUser={currentUser}
             onUpdateUser={handleUpdateUser}
           />
+        )}
+        {currentPage === 'filetree' && (
+          <FileTree />
         )}
       </main>
 
